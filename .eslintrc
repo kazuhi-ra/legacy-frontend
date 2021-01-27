@@ -1,6 +1,24 @@
 {
   "extends": "standard",
   "rules": {
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "comma-dangle": "off"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "globals": {
+    "$": false,
+    "describe": false,
+    "beforeEach": false,
+    "page": false,
+    "it": false,
+    "expect": false
   }
 }
