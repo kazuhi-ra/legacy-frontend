@@ -1,6 +1,7 @@
-import './mount'
 import $ from 'jquery'
 
+import './mount'
+import { mutations } from './Store'
 import { readData } from './reader'
 import {
   toggleTodoList,
@@ -10,10 +11,10 @@ import {
 } from './writer'
 
 function updateAll() {
-  const { count } = readData()
+  const { count, nextTodoText } = readData()
+  mutations.updateTodoCount(count)
+  mutations.updateNextTodoText(nextTodoText as string)
 
-  // writeNextTodo(nextTodoText)
-  // writeTodoCount(count)
   toggleTodoList(count)
   toggleTodoEmpty(count)
 }
