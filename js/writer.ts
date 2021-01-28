@@ -1,12 +1,12 @@
 import $ from 'jquery'
 
-export const writeNextTodo = (nextTodoText) => {
-  $('#nextTodo').text(`次のTODO: ${nextTodoText}`)
-}
+// export const writeNextTodo = (nextTodoText) => {
+//   $('#nextTodo').text(`次のTODO: ${nextTodoText}`)
+// }
 
-export const writeTodoCount = (count) => {
-  $('#todoCount').text(`(全${count}件)`)
-}
+// export const writeTodoCount = (count) => {
+//   $('#todoCount').text(`(全${count}件)`)
+// }
 
 export const toggleTodoList = (count) => {
   if (count) {

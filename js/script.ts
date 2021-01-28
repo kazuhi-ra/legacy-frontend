@@ -1,9 +1,8 @@
+import './mount'
 import $ from 'jquery'
 
 import { readData } from './reader'
 import {
-  writeNextTodo,
-  writeTodoCount,
   toggleTodoList,
   toggleTodoEmpty,
   removeTodo,
@@ -11,10 +10,10 @@ import {
 } from './writer'
 
 function updateAll() {
-  const { count, nextTodoText } = readData()
+  const { count } = readData()
 
-  writeNextTodo(nextTodoText)
-  writeTodoCount(count)
+  // writeNextTodo(nextTodoText)
+  // writeTodoCount(count)
   toggleTodoList(count)
   toggleTodoEmpty(count)
 }
