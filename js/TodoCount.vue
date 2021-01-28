@@ -1,14 +1,15 @@
 <template>
-  <span id='todoCount'>(全{{ count }}件)</span>
+  <span id="todoCount">(全{{ count }}件)</span>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import store from './Store'
 
 export default Vue.extend({
   computed: {
     count() {
-      return 0
+      return store.todoCount
     },
   },
 })
