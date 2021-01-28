@@ -14,7 +14,6 @@
     }
   },
   "globals": {
-    "$": false,
     "describe": false,
     "beforeEach": false,
     "page": false,
