@@ -4,19 +4,12 @@ import Vue from 'vue'
 import './mount'
 import { mutations } from './Store'
 import { readData } from './reader'
-import {
-  toggleTodoList,
-  toggleTodoEmpty,
-} from './writer'
 
 function updateAll() {
   const { count, nextTodoText } = readData()
 
   mutations.updateTodoCount(count)
   mutations.updateNextTodoText(nextTodoText as string)
-
-  toggleTodoList(count)
-  toggleTodoEmpty(count)
 }
 
 $(function () {

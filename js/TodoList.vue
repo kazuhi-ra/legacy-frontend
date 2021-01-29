@@ -1,5 +1,5 @@
 <template>
-  <div id="todoList">
+  <div id="todoList" v-show="visible">
     <div v-for="todo in todoList" :key="todo.key" class="todo">
       <input type="text" />
       <button class="delete">削除</button>
@@ -13,6 +13,9 @@ import store from './Store'
 
 export default Vue.extend({
   computed: {
+    visible() {
+      return store.todoCount !== 0
+    },
     todoList() {
       return store.todoList
     },
