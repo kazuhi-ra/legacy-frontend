@@ -1,13 +1,5 @@
 import $ from 'jquery'
 
-// export const writeNextTodo = (nextTodoText) => {
-//   $('#nextTodo').text(`次のTODO: ${nextTodoText}`)
-// }
-
-// export const writeTodoCount = (count) => {
-//   $('#todoCount').text(`(全${count}件)`)
-// }
-
 export const toggleTodoList = (count) => {
   if (count) {
     $('#todoList').show()
@@ -22,23 +14,4 @@ export const toggleTodoEmpty = (count) => {
   } else {
     $('#todoEmpty').show()
   }
-}
-
-export const removeTodo = ($element) => {
-  $element.closest('.todo').remove()
-}
-
-export const addTodo = () => {
-  const wrapper = $('<div>')
-  wrapper.addClass('todo')
-
-  const input = $('<input>')
-  input.attr('type', 'text')
-
-  const deleteButton = $('<button>')
-  deleteButton.addClass('delete').text('削除')
-
-  wrapper.append(input)
-  wrapper.append(deleteButton)
-  $('#todoList').append(wrapper)
 }
