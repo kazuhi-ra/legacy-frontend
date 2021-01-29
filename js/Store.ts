@@ -24,12 +24,6 @@ export const mutations = {
   updateTodo(index: number, value: string) {
     store.todoList[index].todo = value
   },
-  updateNextTodoText(nextTodoText: string) {
-    store.nextTodoText = nextTodoText
-  },
-  updateTodoCount(todoCount: number) {
-    store.todoCount = todoCount
-  },
 }
 
 export default store as Readonly<typeof store>
