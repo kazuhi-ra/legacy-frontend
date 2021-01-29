@@ -21,6 +21,9 @@ export const mutations = {
   removeTodo(index: number) {
     store.todoList.splice(index, 1)
   },
+  updateTodo(index: number, value: string) {
+    store.todoList[index].todo = value
+  },
   updateNextTodoText(nextTodoText: string) {
     store.nextTodoText = nextTodoText
   },
