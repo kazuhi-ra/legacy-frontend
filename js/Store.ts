@@ -1,14 +1,12 @@
 import Vue from 'vue'
 
-type Todo = {
+export type Todo = {
   key: number
   todo: string
 }
 
 const store = Vue.observable({
   todoList: [] as Todo[],
-  nextTodoText: '',
-  todoCount: 0,
 })
 
 export const mutations = {
