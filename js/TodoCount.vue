@@ -4,14 +4,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import store from './Store'
 
 export default Vue.extend({
-  computed: {
-    count() {
-      return store.todoList.length
-    },
-  },
+  props: {
+    count: { type: Number }
+  }
 })
 </script>
 
